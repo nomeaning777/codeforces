@@ -1,9 +1,13 @@
 def solve(data)
-	if data.match(	eval("/[a-z]*"+$a+"[a-z]*"+$b+"[a-z]*/") ) != nil then
-		return true
-	else
+	q=data.index($a)
+	if q==nil then
+		return false
+	end
+	r=data.rindex($b)
+	if r==nil then
 		return false
 	end	
+	return q+$a.length<=r
 end
 
 input=gets.split[0]

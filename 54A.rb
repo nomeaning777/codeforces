@@ -7,6 +7,7 @@ for i in 1..n
 	if t[0]==i then
 		back=i
 		ans+=1
+		t.shift
 	elsif i-back>=k then
 		back=i
 		ans+=1
